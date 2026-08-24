@@ -602,3 +602,7 @@ h3 { font-size: 20px; line-height: 1.3; }
   [data-appear] { opacity: 1; transform: none; filter: none; transition: none; }
   .btn svg, .fac-card img, .blog-img img { transition: none; }
 }
+
+/* ---------- crop tuning: keep subjects centred in tight containers ---------- */
+.crop-left { object-position: 30% 50%; }
+.crop-bottom { object-position: center 86%; }
