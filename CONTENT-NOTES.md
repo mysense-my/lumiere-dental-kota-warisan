@@ -40,6 +40,14 @@ arrow-slide button hovers.
 Fonts: Inter (headings/body) + Satoshi (stat numerals, partner names) — as in the template.
 
 ## Serving
-Local preview: launch config "lumiere" → http://localhost:9388/ (scratchpad copy;
-`brief.html` on the same server is the earlier scope-brief page).
+LIVE: https://mysense-my.github.io/lumiere-dental-kota-warisan/
+Repo: github.com/mysense-my/lumiere-dental-kota-warisan (shazwan-mysense is a collaborator;
+the old shazwan-mysense repo's Pages site is disabled). Deploy = git push to main.
 Source of truth: ~/Desktop/Lumiere Kota Warisan/site/
+
+## Service images (added later)
+Six free-license Unsplash photos, normalised to 1600x1200 (4:3), in assets/svc-*.jpg
+(scaling 8BkF0sTC6Uo, surgery hl6uG9cHW5A, kids UhVxAkKw8gQ, crowns U1gvhqVQ2kQ,
+dentures 4nUZl0FZM3U, root canal rm7Mgu33tHU). Unsplash+ premium results are watermarked —
+filter raw URLs to images.unsplash.com only. Replace with the clinic's real treatment
+photos when the client supplies them.
