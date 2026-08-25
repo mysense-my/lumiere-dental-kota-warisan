@@ -15,17 +15,15 @@ Palette from the live lumieredental.com.my Elementor kit (gold #E8D397 / slate #
 - Testimonials: retyped from the 9 supplied Google review screenshots (lightly trimmed, wording kept)
 
 ## TODO-confirm with client
-- **Stats row**: "9+ years of clinical practice" (inferred from 2016 graduation), "7 treatments in-house",
-  "5.0 Google rating" — confirm real figures and preferred stats.
-- **Insurance partners strip (hero)**: AIA + PM Care are confirmed from the group site; **MiCare and
-  Koperasi Polis are placeholders** — replace with the branch's actual panel list.
-- **Opening hours**: intentionally left OFF the page (three sources conflict). Add once confirmed.
-- **Blog cards**: placeholder topics + dates; link targets are "#".
-- **Whitening**: shopfront has an unlabelled sparkle-tooth icon; not claimed anywhere on the page.
-  Implants/Invisalign/braces (group-site services) also not claimed.
-- **Dr Tan photo**: none supplied — her card sits in the About grid using team photos. A dedicated
-  doctor section can be added when a portrait arrives.
-- Hero avatars are reviewer initials (NA/ST/IZ), not real people photos.
+- **Stats row**: "9+ years of clinical practice" (inferred from 2016 graduation) and
+  "5.0 Google rating" still need confirming. "8 branches" and "8 treatments" are now factual.
+- **Opening hours** are now ON the page (Contact section), taken from the client's own
+  lumieredental.com.my contact page: Tue & Sun 9am-6pm, all other days 9am-7:30pm.
+  Two third-party directories disagree - please have the clinic confirm.
+- **Service list** now follows the Lumiere group list of 8 (client instruction, Aug 2026).
+  Note this DROPS three treatments painted on the branch shopfront: paediatric dentistry,
+  dentures, and extractions as a standalone. Extractions are folded into General Dentistry.
+  Unused images kept in assets/ (svc-surgery, svc-kids, svc-dentures) if they return.
 
 ## Structure / effects cloned from the template
 Fixed nav (transparent over hero → white on scroll) · full-bleed dark hero with badge pills,
