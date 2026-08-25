@@ -159,7 +159,12 @@ h3 { font-size: 20px; line-height: 1.3; }
 /* ==========================================================================
    HERO
    ========================================================================== */
-.hero { position: relative; min-height: 860px; display: flex; align-items: center; overflow: hidden; }
+.hero {
+  position: relative;
+  min-height: 100vh;          /* fallback for older browsers */
+  min-height: 100dvh;         /* tracks the real viewport on mobile */
+  display: flex; align-items: center; overflow: hidden;
+}
 .hero-bg, .hero-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
@@ -173,7 +178,7 @@ h3 { font-size: 20px; line-height: 1.3; }
 .hero-container {
   position: relative; z-index: 2;
   max-width: 1250px; width: 100%;
-  margin: 0 auto; padding: 168px 30px 92px;
+  margin: 0 auto; padding: 124px 30px 64px;
 }
 .hero-badges { display: flex; gap: 8px; margin-bottom: 26px; flex-wrap: wrap; }
 .badge { font-size: 13.5px; padding: 6px 13px; border-radius: 100px; line-height: 1.3; }
@@ -201,24 +206,26 @@ h3 { font-size: 20px; line-height: 1.3; }
 /* ==========================================================================
    PANELS
    ========================================================================== */
-.section-panels { padding-top: 56px; padding-bottom: 10px; }
-.panel-card {
-  background: var(--surface); border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  padding: 38px 44px 42px; text-align: center;
+.panel-head { margin-bottom: 38px; }
+.panel-tray {
+  background: var(--tray); border-radius: var(--radius-lg); padding: 10px;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
 }
-.panel-title { font-size: 27px; letter-spacing: -.015em; }
-.panel-sub { margin-top: 9px; font-size: 15.5px; }
-.panel-logos {
-  margin-top: 30px;
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
-  gap: 24px 56px;
+.panel-item {
+  background: var(--surface); border-radius: var(--radius-md);
+  min-height: 132px; padding: 26px 22px;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .35s var(--ease-spring), box-shadow .35s ease;
 }
-.panel-logos img {
-  width: 150px; height: 64px; object-fit: contain; object-position: center;
-  transition: transform .3s var(--ease-spring);
+.panel-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+.panel-item img { width: 100%; max-width: 132px; height: 58px; object-fit: contain; }
+.panel-note {
+  margin: 22px auto 0; max-width: 640px;
+  display: flex; align-items: center; gap: 14px;
+  font-size: 15px; line-height: 1.5;
 }
-.panel-logos img:hover { transform: scale(1.06); }
+.panel-note a { color: var(--gold-deep); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+.panel-note a:hover { color: var(--ink); }
 
 /* ==========================================================================
    ABOUT / VISION
@@ -261,6 +268,9 @@ h3 { font-size: 20px; line-height: 1.3; }
 .doc-photo {
   border-radius: var(--radius-md); overflow: hidden;
   aspect-ratio: 4 / 3; width: 100%; align-self: start;
+  /* the bio column is taller than the photo, so the photo travels down its
+     grid area as you scroll instead of leaving dead space beneath it */
+  position: sticky; top: 112px;
 }
 .doc-photo img { width: 100%; height: 100%; object-fit: cover; }
 .doc-body { padding: 30px 34px 30px 26px; display: flex; flex-direction: column; }
@@ -476,11 +486,13 @@ a.ct-row:hover { background: var(--gold-wash); }
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-.footer { padding: 50px 0 40px; }
+.footer {
+  margin-top: 70px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
 .footer-card {
-  background: var(--surface); border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  padding: 52px 54px;
+  padding: 64px 0 48px;
   display: grid; grid-template-columns: 1.4fr .8fr .9fr 1.3fr; gap: 44px;
 }
 .f-logo img { height: 74px; width: auto; }
@@ -501,13 +513,14 @@ a.ct-row:hover { background: var(--gold-wash); }
 .f-contact svg { width: 19px; height: 19px; flex: none; margin-top: 1px; color: var(--gold-deep); }
 .f-contact a { display: inline; padding: 0; }
 .footer-bar {
-  margin-top: 14px;
-  background: var(--surface); border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  padding: 20px 54px;
+  border-top: 1px solid var(--line-soft);
+  padding: 22px 0 28px;
   display: flex; justify-content: space-between; align-items: center; gap: 16px;
   font-size: 14.5px;
 }
+/* keep the last line clear of the fixed WhatsApp button */
+.f-alt { padding-right: 74px; }
+.f-social a { background: var(--ground); }
 
 /* ==========================================================================
    FLOATING WHATSAPP
@@ -542,9 +555,11 @@ a.ct-row:hover { background: var(--gold-wash); }
   .vision-tray { grid-template-columns: 1fr 1fr; }
   .testi-quote-card blockquote p { font-size: 23px; }
   .doc-block { grid-template-columns: 1fr; }
-  .doc-photo { aspect-ratio: 16 / 9; }
+  /* stacked: the photo no longer has a taller neighbour to travel against */
+  .doc-photo { aspect-ratio: 16 / 9; position: static; }
   .doc-body { padding: 26px 28px 30px; }
-  .panel-logos { gap: 20px 40px; }
+  .panel-tray { grid-template-columns: repeat(3, 1fr); }
+  .panel-item { min-height: 118px; }
 }
 
 @media (max-width: 860px) {
@@ -552,11 +567,12 @@ a.ct-row:hover { background: var(--gold-wash); }
   .nav-burger { display: block; margin-left: auto; }
   .nav-logo img { height: 48px; }
   .nav-logo span { font-size: 19px; }
-  .hero { min-height: 0; }
-  .hero-container { padding: 140px 30px 64px; }
+  /* hero keeps the full 100dvh on phones too; min-height lets it grow if the
+     content is taller than a short landscape viewport */
+  .hero-container { padding: 112px 30px 56px; }
   h1 { font-size: 40px; }
-  .panel-card { padding: 30px 24px 34px; }
-  .panel-logos img { width: 118px; height: 52px; }
+  .panel-item img { max-width: 112px; height: 50px; }
+  .panel-note { font-size: 14.5px; }
   .stats-tray { grid-template-columns: 1fr 1fr; }
   .svc-card {
     /* keep the sticky stack on phones by compacting each card so it fits
@@ -584,7 +600,8 @@ a.ct-row:hover { background: var(--gold-wash); }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-map, .contact-map iframe { min-height: 320px; }
   .footer-card { grid-template-columns: 1fr 1fr; padding: 36px 32px; gap: 34px; }
-  .footer-bar { flex-direction: column; text-align: center; padding: 18px 24px; }
+  .footer-bar { flex-direction: column; text-align: center; padding: 18px 0 88px; }
+  .f-alt { padding-right: 0; }
   .wa-float { right: 16px; bottom: 16px; width: 54px; height: 54px; }
   .wa-float svg { width: 29px; height: 29px; }
 }
@@ -602,9 +619,13 @@ a.ct-row:hover { background: var(--gold-wash); }
   .section { padding: 64px 0 28px; }
   h1 { font-size: 33px; }
   h2 { font-size: 29px; }
-  .hero-container { padding: 122px 20px 52px; }
+  .hero-container { padding: 104px 20px 44px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { justify-content: center; }
+  .panel-tray { grid-template-columns: repeat(2, 1fr); }
+  .panel-item { min-height: 104px; padding: 20px 16px; }
+  .panel-item:last-child { grid-column: 1 / -1; }
+  .panel-note { flex-direction: column; text-align: center; gap: 10px; }
   .nav-logo img { height: 44px; }
   .nav-logo span { font-size: 17.5px; }
   .nav-inner { padding: 13px 20px; }
