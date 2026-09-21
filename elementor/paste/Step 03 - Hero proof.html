@@ -1,0 +1,28 @@
+<!-- Lumiere hero · rating row. Paste into an Elementor HTML widget. -->
+<div class="lm-proof">
+  <div class="lm-proof__avatars" aria-hidden="true">
+    <span>NA</span><span>ST</span><span>IZ</span><span class="lm-plus">+</span>
+  </div>
+  <div>
+    <div class="lm-proof__stars" aria-label="Rated 5 out of 5">★★★★★</div>
+    <p class="lm-proof__text">Rated 5.0 on Google Reviews</p>
+  </div>
+</div>
+
+<style>
+.lm-proof{display:flex;align-items:center;gap:15px;margin-top:44px}
+.lm-proof__avatars{display:flex}
+.lm-proof__avatars span{
+  width:40px;height:40px;border-radius:50%;
+  background:#E8D397;color:#8F702A;
+  border:2px solid rgba(255,255,255,.9);
+  display:flex;align-items:center;justify-content:center;
+  font:600 12.5px/1 Inter,sans-serif;letter-spacing:.02em;
+  margin-left:-10px;
+}
+.lm-proof__avatars span:first-child{margin-left:0}
+.lm-proof__avatars .lm-plus{background:#fff;color:#1F2833;font-size:17px;font-weight:500}
+.lm-proof__stars{color:#F0B428;font-size:15px;letter-spacing:2px;line-height:1}
+.lm-proof__text{color:rgba(255,255,255,.85);font:400 15px/1.4 Inter,sans-serif;margin:5px 0 0}
+@media(max-width:767px){.lm-proof{margin-top:32px}}
+</style>
