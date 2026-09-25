@@ -61,6 +61,18 @@ h3.sub{font-size:13.5px;margin:16px 0 8px;padding-top:6px;border-top:1px dashed 
 .bio td.k{width:54px;color:#8F702A;font-weight:600;font-family:Menlo,monospace;font-size:9.2px}
 .check td{padding:7px 9px;border-bottom:1px solid #E6E2D6;vertical-align:top}
 .check td:first-child{width:20px;font-size:13px}
+.diagram{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 12px;break-inside:avoid}
+.dg{border:1px solid #E6E2D6;border-radius:8px;overflow:hidden;background:#FBFAF6}
+.dg-h{font-size:9.4px;font-weight:600;color:#5A6270;padding:5px 8px;background:#F3F1EA;border-bottom:1px solid #E6E2D6}
+.dg-v{padding:7px;display:flex;flex-direction:column;gap:4px;min-height:132px}
+.dg-bar{background:#1F2833;color:#fff;font-size:8px;text-align:center;padding:3px;border-radius:3px;letter-spacing:.04em}
+.dg-c{font-size:8.2px;line-height:1.3;padding:8px 7px;border-radius:5px;border:1px solid #E6E2D6;background:#fff;color:#3a3f48}
+.dg-pin{border-color:#C9A64D;background:#FFFDF6;font-weight:600}
+.dg-over{box-shadow:0 -3px 8px -3px rgba(31,40,51,.45);position:relative;margin-top:-4px}
+.dg-cut{opacity:.45}
+.dg-edge{padding:3px 7px;font-size:7.4px;opacity:.4;background:#F3F1EA}
+.dg-nx{opacity:.6;border-style:dashed}
+
 </style></head><body>
 <section class="cover">
 <p class="kicker">Lumiere Dental Clinic &middot; Kota Warisan</p>
@@ -493,20 +505,125 @@ that is a different, JavaScript-driven feature and it will not stack. Sticky als
 working if any ancestor has Overflow set to Hidden, so <b>services</b> and <b>svc-stack</b>
 must both stay on Default.</p>
 
-<div class="block"><h4><span class="kind">Container</span> services</h4><p class="note">The CSS ID is what the header menu links jump to. Type it without the #.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Content Width</td><td>Boxed</td></tr><tr><td class="tab">Layout</td><td>Width</td><td>1250</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td>Column</td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Center</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td>0</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td><b>Desktop</b> Top 90 &nbsp; Right 30 &nbsp; Bottom 40 &nbsp; Left 30 &nbsp;&middot;&nbsp; <b>Tablet</b> Top 90 &nbsp; Right 30 &nbsp; Bottom 40 &nbsp; Left 30 &nbsp;&middot;&nbsp; <b>Mobile</b> Top 64 &nbsp; Right 20 &nbsp; Bottom 28 &nbsp; Left 20</td></tr><tr><td class="tab">Advanced</td><td>Overflow</td><td>Default</td></tr><tr><td class="tab">Advanced</td><td>CSS ID</td><td><code>services</code></td></tr></tbody></table></div>
-<div class="block"><h4><span class="kind">Container</span> sec-head</h4><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td>Column</td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Center</td></tr><tr><td class="tab">Layout</td><td>Width</td><td>Custom &rarr; <b>640</b> PX</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td>0</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 38 &nbsp; Left 0</td></tr></tbody></table></div><div class="block"><h4><span class="kind">Heading</span> eyebrow</h4><p class="note">&#9670; is a typed character &mdash; copy it from this line, then a space, then the words.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Content</td><td>Title</td><td>&#9670; Our Services</td></tr><tr><td class="tab">Content</td><td>HTML Tag</td><td>p</td></tr><tr><td class="tab">Style</td><td>Alignment</td><td>Center</td></tr><tr><td class="tab">Style</td><td>Text Color</td><td><code>#8F702A</code></td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Family</td><td>Inter</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Size</td><td>15 PX</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Weight</td><td>500</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 14 &nbsp; Left 0</td></tr></tbody></table></div><div class="block"><h4><span class="kind">Heading</span> h2</h4><p class="note">Type the <code>&lt;br&gt;</code> into the Title field exactly where it appears above.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Content</td><td>Title</td><td>Complete Dental Care&lt;br&gt;Under One Roof</td></tr><tr><td class="tab">Content</td><td>HTML Tag</td><td>h2</td></tr><tr><td class="tab">Style</td><td>Alignment</td><td>Center</td></tr><tr><td class="tab">Style</td><td>Text Color</td><td><code>#1F2833</code></td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Family</td><td>Inter</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Size</td><td><b>Desktop</b> 46 PX &nbsp;&middot;&nbsp; <b>Tablet</b> 38 PX &nbsp;&middot;&nbsp; <b>Mobile</b> 29 PX</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Weight</td><td>600</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Line Height</td><td>1.22 EM</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Letter Spacing</td><td><b>Desktop</b> &minus;0.9 PX &nbsp;&middot;&nbsp; <b>Tablet</b> &minus;0.8 PX &nbsp;&middot;&nbsp; <b>Mobile</b> &minus;0.6 PX</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr></tbody></table></div><div class="block"><h4><span class="kind">Heading</span> sub</h4><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Content</td><td>Title</td><td>From routine checkups to a full smile makeover, handled in-clinic by Dr Tan and her team.</td></tr><tr><td class="tab">Content</td><td>HTML Tag</td><td>p</td></tr><tr><td class="tab">Style</td><td>Alignment</td><td>Center</td></tr><tr><td class="tab">Style</td><td>Text Color</td><td><code>#5A6270</code></td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Family</td><td>Inter</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Size</td><td>16 PX</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Weight</td><td>400</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Line Height</td><td>1.4 EM</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 16 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr></tbody></table></div>
 
-<div class="block"><h4><span class="kind">Container</span> svc-stack</h4><p class="note">Gap is 0 on purpose. The space between cards comes from each card&rsquo;s own bottom margin &mdash; a flex gap would push the cards apart as they pin and break the overlap.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td>Column</td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Stretch</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td><b>0</b></td></tr><tr><td class="tab">Layout</td><td>Width</td><td>100 %</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Overflow</td><td><b>Default</b></td></tr></tbody></table></div>
+<h3 class="sub">How the stacking effect actually works</h3>
+<p>This is the one effect on the page that is not a normal layout, so it is worth
+understanding before you build it. It is <b>not</b> an animation, there is no JavaScript, and
+nothing fades or moves on a timer. It is one CSS property doing all of the work.</p>
 
-<div class="block"><h4><span class="kind">Container</span> svc-card</h4><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td><b>Desktop</b> Row &nbsp;&middot;&nbsp; <b>Tablet</b> <b>Column</b> &nbsp;&middot;&nbsp; <b>Mobile</b> <b>Column</b></td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Center</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td><b>Desktop</b> 48 &nbsp;&middot;&nbsp; <b>Tablet</b> 18 &nbsp;&middot;&nbsp; <b>Mobile</b> 18</td></tr><tr><td class="tab">Layout</td><td>Width</td><td>100 %</td></tr><tr><td class="tab">Style</td><td>Background Color</td><td><code>#FFFFFF</code></td></tr><tr><td class="tab">Style</td><td>Box Shadow</td><td>Horizontal 0 &nbsp; Vertical 10 &nbsp; Blur 30 &nbsp; Spread &minus;18 &nbsp; <code>rgba(31,40,51,.25)</code></td></tr><tr><td class="tab">Advanced</td><td>Border Radius</td><td>24 PX</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td><b>Desktop</b> Top 40 &nbsp; Right 40 &nbsp; Bottom 40 &nbsp; Left 40 &nbsp;&middot;&nbsp; <b>Tablet</b> Top 22 &nbsp; Right 22 &nbsp; Bottom 22 &nbsp; Left 22 &nbsp;&middot;&nbsp; <b>Mobile</b> Top 22 &nbsp; Right 22 &nbsp; Bottom 22 &nbsp; Left 22</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td><b>Desktop</b> Top 0 &nbsp; Right 0 &nbsp; Bottom 28 &nbsp; Left 0 &nbsp;&middot;&nbsp; <b>Tablet</b> Top 0 &nbsp; Right 0 &nbsp; Bottom 24 &nbsp; Left 0 &nbsp;&middot;&nbsp; <b>Mobile</b> Top 0 &nbsp; Right 0 &nbsp; Bottom 24 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Overflow</td><td>Default</td></tr></tbody></table><pre class="code">selector{position:sticky; top:100px}
+<p>Every one of the eight cards gets <code>position: sticky</code> with the <b>same</b>
+<code>top: 100px</code>. Sticky means: behave like a normal element until you would scroll
+past that point, then stop and stay there. Because all eight share the same stopping point
+and they sit one after another in the page, each card scrolls up, parks 100px below the top
+of the screen, and the next card slides up <b>over</b> it. The pinned card never moves again,
+so by the last card you have a stack of eight, each covering the one before.</p>
 
-/* phones: only stack when the screen is tall enough for a whole card */
+<div class="diagram">
+  <div class="dg">
+    <div class="dg-h">1 &middot; Card 1 pins</div>
+    <div class="dg-v">
+      <div class="dg-bar">header</div>
+      <div class="dg-c dg-pin">card 1 &mdash; pinned at 100px</div>
+      <div class="dg-c dg-nx">card 2 &mdash; still below, scrolling up</div>
+    </div>
+  </div>
+  <div class="dg">
+    <div class="dg-h">2 &middot; Card 2 slides over</div>
+    <div class="dg-v">
+      <div class="dg-bar">header</div>
+      <div class="dg-c dg-pin dg-cut">card 1 &mdash; being covered</div>
+      <div class="dg-c dg-pin dg-over">card 2 &mdash; arriving, casts a shadow down</div>
+    </div>
+  </div>
+  <div class="dg">
+    <div class="dg-h">3 &middot; Both pinned</div>
+    <div class="dg-v">
+      <div class="dg-bar">header</div>
+      <div class="dg-c dg-edge">card 1 (hidden underneath)</div>
+      <div class="dg-c dg-pin dg-over">card 2 &mdash; now pinned at 100px</div>
+      <div class="dg-c dg-nx">card 3 &mdash; next up</div>
+    </div>
+  </div>
+</div>
+
+<h3 class="sub">The two shadows</h3>
+<p>The card carries <b>two</b> box shadows, and they do different jobs. Elementor's Box Shadow
+control only takes one set of values, so the second is added in the Custom CSS box below.</p>
+<table class="overview"><thead><tr><th>Shadow</th><th>Values</th><th>What it does</th></tr></thead><tbody>
+<tr><td>Downward (panel control)</td><td>H 0 &nbsp; V 10 &nbsp; Blur 30 &nbsp; Spread &minus;18 &nbsp;<code>rgba(31,40,51,.25)</code></td><td>The normal card lift, same as every other card on the page.</td></tr>
+<tr><td><b>Upward (CSS)</b></td><td>H 0 &nbsp; V &minus;6 &nbsp; Blur 24 &nbsp; Spread &minus;20 &nbsp;<code>rgba(31,40,51,.3)</code></td><td><b>This is what sells the stack.</b> It darkens the top edge of the arriving card so it reads as sitting <i>on top of</i> the pinned one, not merely scrolling past it. Skip this and the effect looks flat and slightly broken.</td></tr>
+</tbody></table>
+
+<h3 class="sub">The Custom CSS, and where it goes</h3>
+<p>Select <b>svc-card</b> &rarr; <b>Advanced &rsaquo; Custom CSS</b> and paste all of this.
+The word <code>selector</code> is Elementor's own shorthand for "this element" &mdash; leave it
+exactly as written, do not replace it with a class name.</p>
+<pre class="code">selector{
+  position:sticky;
+  top:100px;
+  box-shadow:0 -6px 24px -20px rgba(31,40,51,.3),
+             0 10px 30px -18px rgba(31,40,51,.25);
+}
+
+/* phones: only stack when the screen is tall enough to show a whole card */
 @media(max-width:860px) and (min-height:700px){
   selector{position:sticky; top:80px}
 }
 @media(max-width:860px) and (max-height:699px){
   selector{position:relative; top:auto}
-}</pre></div>
+}</pre>
+<p class="note"><b>Do this on card 1 BEFORE you duplicate.</b> Right-click &rarr; Duplicate
+copies a container's Custom CSS along with everything else, so all eight cards inherit the
+rule for free. If you build all eight first, you will be pasting the same block eight times.</p>
+<p class="note">If you paste the CSS above, you can leave the panel's <b>Style &rsaquo; Box
+Shadow</b> control switched off entirely &mdash; the second line of the CSS already contains
+both shadows. Use one or the other, not both, or you will end up with three shadows.</p>
+
+<h3 class="sub">Four things that will stop it working</h3>
+<table class="overview"><thead><tr><th>#</th><th>Requirement</th><th>Why</th></tr></thead><tbody>
+<tr><td>1</td><td><b>No ancestor may have Overflow: Hidden.</b> Check <code>svc-card</code>'s parents: <code>svc-stack</code>, <code>services</code>, and the page body.</td><td>A scroll container anywhere above a sticky element silently cancels it. There is no error &mdash; the card just behaves normally. This is the single most common cause.</td></tr>
+<tr><td>2</td><td><b>svc-stack Gap must be 0</b>, and the spacing comes from each card's Margin Bottom 28 instead.</td><td>A flex gap is added <i>between</i> the flex items, so as the cards pin it keeps forcing them apart and they never overlap.</td></tr>
+<tr><td>3</td><td><b>top must be larger than the header.</b> The header is about 92px tall, so 100px leaves 8px of breathing room.</td><td>Set it lower than 92 and the cards pin <i>behind</i> the sticky header and get clipped by it.</td></tr>
+<tr><td>4</td><td><b>No Entrance Animation on svc-card.</b></td><td>Elementor's entrance animations work by transforming the element. A transform on a sticky element fights the pinning, and the cards visibly jump as they park.</td></tr>
+</tbody></table>
+
+<h3 class="sub">How to check it</h3>
+<p><b>The Elementor editor canvas does not show this properly.</b> Editing overlays and the
+canvas's own scrolling interfere, so the cards will look wrong while you are building them.
+That is expected &mdash; do not try to fix it from inside the editor.</p>
+<ol class="do">
+<li>Save, then click the <b>eye icon</b> at the bottom of the panel &rarr; <b>Preview Changes</b>.</li>
+<li>Scroll slowly through the services section. Card 1 should stop near the top and stay there
+while card 2 rises and covers it.</li>
+<li>Keep going. By card 8 you should be looking at a stack, with a faint dark line along the
+top edge of each arriving card.</li>
+<li>Then narrow the browser to phone width and scroll again &mdash; the cards should still
+stack, just tighter.</li>
+</ol>
+
+<h3 class="sub">If it does not stack</h3>
+<table class="overview"><thead><tr><th>What you see</th><th>Cause</th><th>Fix</th></tr></thead><tbody>
+<tr><td>Cards scroll past each other like a normal list</td><td>Overflow: Hidden on a parent, or the CSS did not save</td><td>Set <code>svc-stack</code> and <code>services</code> to Overflow <b>Default</b>, then re-check the Custom CSS box</td></tr>
+<tr><td>Cards pin but never overlap &mdash; a gap stays between them</td><td><code>svc-stack</code> still has a Gap value</td><td>Set Layout &rsaquo; Gap to <b>0</b>; spacing lives on the card's Margin Bottom</td></tr>
+<tr><td>Cards slide under the header and get cut off</td><td><code>top</code> is smaller than the header height</td><td>Use <code>top:100px</code></td></tr>
+<tr><td>Cards jump or flicker as they pin</td><td>An Entrance Animation is on the card</td><td>Remove it from all eight</td></tr>
+<tr><td>Stacking works but looks flat</td><td>The upward shadow is missing</td><td>Add the <code>0 -6px 24px -20px</code> shadow from the CSS above</td></tr>
+<tr><td>Only the last card is visible on a short laptop screen</td><td>Working as intended &mdash; they are stacked</td><td>Scroll back up; the cards un-pin in reverse</td></tr>
+</tbody></table>
+
+<p class="note"><b>The same mechanism appears twice more on this page</b>, with smaller
+numbers: <code>doc-photo</code> in Step 6 (<code>top:112px</code>) and <code>how-sticky</code>
+in Step 10 (<code>top:130px</code>). Those two each have only one sticky element rather than a
+stack, so they travel rather than pile up, but the same four requirements apply &mdash;
+especially the Overflow one.</p>
+
+
+<div class="block"><h4><span class="kind">Container</span> services</h4><p class="note">The CSS ID is what the header menu links jump to. Type it without the #.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Content Width</td><td>Boxed</td></tr><tr><td class="tab">Layout</td><td>Width</td><td>1250</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td>Column</td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Center</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td>0</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td><b>Desktop</b> Top 90 &nbsp; Right 30 &nbsp; Bottom 40 &nbsp; Left 30 &nbsp;&middot;&nbsp; <b>Tablet</b> Top 90 &nbsp; Right 30 &nbsp; Bottom 40 &nbsp; Left 30 &nbsp;&middot;&nbsp; <b>Mobile</b> Top 64 &nbsp; Right 20 &nbsp; Bottom 28 &nbsp; Left 20</td></tr><tr><td class="tab">Advanced</td><td>Overflow</td><td>Default</td></tr><tr><td class="tab">Advanced</td><td>CSS ID</td><td><code>services</code></td></tr></tbody></table></div>
+<div class="block"><h4><span class="kind">Container</span> sec-head</h4><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td>Column</td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Center</td></tr><tr><td class="tab">Layout</td><td>Width</td><td>Custom &rarr; <b>640</b> PX</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td>0</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 38 &nbsp; Left 0</td></tr></tbody></table></div><div class="block"><h4><span class="kind">Heading</span> eyebrow</h4><p class="note">&#9670; is a typed character &mdash; copy it from this line, then a space, then the words.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Content</td><td>Title</td><td>&#9670; Our Services</td></tr><tr><td class="tab">Content</td><td>HTML Tag</td><td>p</td></tr><tr><td class="tab">Style</td><td>Alignment</td><td>Center</td></tr><tr><td class="tab">Style</td><td>Text Color</td><td><code>#8F702A</code></td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Family</td><td>Inter</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Size</td><td>15 PX</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Weight</td><td>500</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 14 &nbsp; Left 0</td></tr></tbody></table></div><div class="block"><h4><span class="kind">Heading</span> h2</h4><p class="note">Type the <code>&lt;br&gt;</code> into the Title field exactly where it appears above.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Content</td><td>Title</td><td>Complete Dental Care&lt;br&gt;Under One Roof</td></tr><tr><td class="tab">Content</td><td>HTML Tag</td><td>h2</td></tr><tr><td class="tab">Style</td><td>Alignment</td><td>Center</td></tr><tr><td class="tab">Style</td><td>Text Color</td><td><code>#1F2833</code></td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Family</td><td>Inter</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Size</td><td><b>Desktop</b> 46 PX &nbsp;&middot;&nbsp; <b>Tablet</b> 38 PX &nbsp;&middot;&nbsp; <b>Mobile</b> 29 PX</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Weight</td><td>600</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Line Height</td><td>1.22 EM</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Letter Spacing</td><td><b>Desktop</b> &minus;0.9 PX &nbsp;&middot;&nbsp; <b>Tablet</b> &minus;0.8 PX &nbsp;&middot;&nbsp; <b>Mobile</b> &minus;0.6 PX</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr></tbody></table></div><div class="block"><h4><span class="kind">Heading</span> sub</h4><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Content</td><td>Title</td><td>From routine checkups to a full smile makeover, handled in-clinic by Dr Tan and her team.</td></tr><tr><td class="tab">Content</td><td>HTML Tag</td><td>p</td></tr><tr><td class="tab">Style</td><td>Alignment</td><td>Center</td></tr><tr><td class="tab">Style</td><td>Text Color</td><td><code>#5A6270</code></td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Family</td><td>Inter</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Size</td><td>16 PX</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Weight</td><td>400</td></tr><tr><td class="tab">Style</td><td>Typography &rsaquo; Line Height</td><td>1.4 EM</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 16 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr></tbody></table></div>
+
+<div class="block"><h4><span class="kind">Container</span> svc-stack</h4><p class="note">Gap is 0 on purpose. The space between cards comes from each card&rsquo;s own bottom margin &mdash; a flex gap would push the cards apart as they pin and break the overlap.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td>Column</td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Stretch</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td><b>0</b></td></tr><tr><td class="tab">Layout</td><td>Width</td><td>100 %</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Overflow</td><td><b>Default</b></td></tr></tbody></table></div>
+
+<div class="block"><h4><span class="kind">Container</span> svc-card</h4><p class="note">The Custom CSS for this card is in <b>The Custom CSS, and where it goes</b> above &mdash; paste it before you duplicate.</p><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Direction</td><td><b>Desktop</b> Row &nbsp;&middot;&nbsp; <b>Tablet</b> <b>Column</b> &nbsp;&middot;&nbsp; <b>Mobile</b> <b>Column</b></td></tr><tr><td class="tab">Layout</td><td>Align Items</td><td>Center</td></tr><tr><td class="tab">Layout</td><td>Gap</td><td><b>Desktop</b> 48 &nbsp;&middot;&nbsp; <b>Tablet</b> 18 &nbsp;&middot;&nbsp; <b>Mobile</b> 18</td></tr><tr><td class="tab">Layout</td><td>Width</td><td>100 %</td></tr><tr><td class="tab">Style</td><td>Background Color</td><td><code>#FFFFFF</code></td></tr><tr><td class="tab">Style</td><td>Box Shadow</td><td>see <b>The two shadows</b> below &mdash; this card needs <b>two</b>, not one</td></tr><tr><td class="tab">Advanced</td><td>Border Radius</td><td>24 PX</td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td><b>Desktop</b> Top 40 &nbsp; Right 40 &nbsp; Bottom 40 &nbsp; Left 40 &nbsp;&middot;&nbsp; <b>Tablet</b> Top 22 &nbsp; Right 22 &nbsp; Bottom 22 &nbsp; Left 22 &nbsp;&middot;&nbsp; <b>Mobile</b> Top 22 &nbsp; Right 22 &nbsp; Bottom 22 &nbsp; Left 22</td></tr><tr><td class="tab">Advanced</td><td>Margin</td><td><b>Desktop</b> Top 0 &nbsp; Right 0 &nbsp; Bottom 28 &nbsp; Left 0 &nbsp;&middot;&nbsp; <b>Tablet</b> Top 0 &nbsp; Right 0 &nbsp; Bottom 24 &nbsp; Left 0 &nbsp;&middot;&nbsp; <b>Mobile</b> Top 0 &nbsp; Right 0 &nbsp; Bottom 24 &nbsp; Left 0</td></tr><tr><td class="tab">Advanced</td><td>Overflow</td><td>Default</td></tr></tbody></table></div>
 
 <div class="block"><h4><span class="kind">Container</span> svc-media</h4><table class="set"><thead><tr><th>Tab</th><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td class="tab">Layout</td><td>Container Layout</td><td>Flexbox</td></tr><tr><td class="tab">Layout</td><td>Width</td><td><b>Desktop</b> 50 % &nbsp;&middot;&nbsp; <b>Tablet</b> 100 % &nbsp;&middot;&nbsp; <b>Mobile</b> 100 %</td></tr><tr><td class="tab">Advanced</td><td>Border Radius</td><td>12 PX</td></tr><tr><td class="tab">Advanced</td><td>Overflow</td><td><b>Hidden</b></td></tr><tr><td class="tab">Advanced</td><td>Padding</td><td>Top 0 &nbsp; Right 0 &nbsp; Bottom 0 &nbsp; Left 0</td></tr></tbody></table><pre class="code">selector{aspect-ratio:4/3}
 @media(max-width:860px){ selector{aspect-ratio:16/10} }</pre></div>
