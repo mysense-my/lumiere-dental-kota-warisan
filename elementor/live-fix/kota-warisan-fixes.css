@@ -1,0 +1,278 @@
+/* ============================================================
+   Lumiere Dental Kota Warisan - mockup parity fixes
+   Paste into: Elementor > Page Settings (gear) > Advanced > Custom CSS
+   Scope .elementor-4281 = this page's content only.
+   The header and footer are separate templates and are NOT touched.
+   ============================================================ */
+
+/* --- 1. Inter everywhere in the page body -------------------
+   Sizes and spacing were set correctly, but most widgets never
+   got the font family, so they fell back to the system font.    */
+.elementor-4281,
+.elementor-4281 h1, .elementor-4281 h2, .elementor-4281 h3, .elementor-4281 h4,
+.elementor-4281 p, .elementor-4281 li, .elementor-4281 span, .elementor-4281 a,
+.elementor-4281 .elementor-heading-title,
+.elementor-4281 .elementor-widget-text-editor,
+.elementor-4281 .elementor-icon-list-text,
+.elementor-4281 .elementor-counter-number,
+.elementor-4281 .elementor-counter-title,
+.elementor-4281 .elementor-icon-box-title,
+.elementor-4281 .elementor-icon-box-description,
+.elementor-4281 .elementor-button,
+.elementor-4281 .elementor-button-text,
+.elementor-4281 .e-n-accordion-item-title,
+.elementor-4281 .elementor-accordion-title {
+  font-family: "Inter", -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+/* --- 2. Section headings: 64px back down to the mockup's 46 -- */
+.elementor-4281 .elementor-element-74c10e5 .elementor-heading-title,
+.elementor-4281 .elementor-element-f308e90 .elementor-heading-title,
+.elementor-4281 .elementor-element-5b8ab2a .elementor-heading-title,
+.elementor-4281 .elementor-element-6e7972a .elementor-heading-title,
+.elementor-4281 .elementor-element-4f2f72c .elementor-heading-title,
+.elementor-4281 .elementor-element-2ac359d .elementor-heading-title {
+  font-size: 46px !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.9px !important;
+}
+@media (max-width: 1024px) {
+  .elementor-4281 .elementor-element-74c10e5 .elementor-heading-title,
+  .elementor-4281 .elementor-element-f308e90 .elementor-heading-title,
+  .elementor-4281 .elementor-element-5b8ab2a .elementor-heading-title,
+  .elementor-4281 .elementor-element-6e7972a .elementor-heading-title,
+  .elementor-4281 .elementor-element-4f2f72c .elementor-heading-title,
+  .elementor-4281 .elementor-element-2ac359d .elementor-heading-title {
+    font-size: 38px !important; letter-spacing: -0.8px !important;
+  }
+}
+@media (max-width: 767px) {
+  .elementor-4281 .elementor-element-74c10e5 .elementor-heading-title,
+  .elementor-4281 .elementor-element-f308e90 .elementor-heading-title,
+  .elementor-4281 .elementor-element-5b8ab2a .elementor-heading-title,
+  .elementor-4281 .elementor-element-6e7972a .elementor-heading-title,
+  .elementor-4281 .elementor-element-4f2f72c .elementor-heading-title,
+  .elementor-4281 .elementor-element-2ac359d .elementor-heading-title {
+    font-size: 29px !important; letter-spacing: -0.6px !important;
+  }
+}
+
+/* --- 3. Line height ----------------------------------------
+   46 widgets were left on line-height 1, which crams the text.
+   Body copy back to 1.4, card and step headings back to 1.3.   */
+.elementor-4281 .elementor-element-9fef3d3 .elementor-heading-title,
+.elementor-4281 .elementor-element-ae5d5fd .elementor-heading-title,
+.elementor-4281 .elementor-element-ad13943 .elementor-heading-title,
+.elementor-4281 .elementor-element-dd6541c .elementor-heading-title,
+.elementor-4281 .elementor-element-aa88942 .elementor-heading-title,
+.elementor-4281 .elementor-element-a29f6a1 .elementor-heading-title,
+.elementor-4281 .elementor-element-ab06b51 .elementor-heading-title,
+.elementor-4281 .elementor-element-8eac090 .elementor-heading-title,
+.elementor-4281 .elementor-element-cbbafd2 .elementor-heading-title,
+.elementor-4281 .elementor-element-121b95a .elementor-heading-title,
+.elementor-4281 .elementor-element-973c012 .elementor-heading-title,
+.elementor-4281 .elementor-element-7daa6d1 .elementor-heading-title,
+.elementor-4281 .elementor-element-701d230 .elementor-heading-title,
+.elementor-4281 .elementor-element-8d2c28b .elementor-heading-title,
+.elementor-4281 .elementor-element-66f50b4 .elementor-heading-title,
+.elementor-4281 .elementor-element-102fadf .elementor-heading-title,
+.elementor-4281 .elementor-element-3247711 .elementor-heading-title,
+.elementor-4281 .elementor-element-f4e3ce0 .elementor-heading-title,
+.elementor-4281 .elementor-element-7b39bf7 .elementor-heading-title,
+.elementor-4281 .elementor-element-26a767f .elementor-heading-title,
+.elementor-4281 .elementor-element-eb6554c .elementor-heading-title,
+.elementor-4281 .elementor-element-6eb18f6 .elementor-heading-title,
+.elementor-4281 .elementor-element-6c04659 .elementor-heading-title,
+.elementor-4281 .elementor-element-77586a2 .elementor-heading-title,
+.elementor-4281 .elementor-element-49c460c .elementor-heading-title,
+.elementor-4281 .elementor-element-ac864ca .elementor-heading-title,
+.elementor-4281 .elementor-element-e9982ae .elementor-heading-title,
+.elementor-4281 .elementor-element-ed18b35 .elementor-heading-title,
+.elementor-4281 .elementor-element-b105972 .elementor-heading-title,
+.elementor-4281 .elementor-element-75b6fa7 .elementor-heading-title,
+.elementor-4281 .elementor-element-57b4da1 .elementor-heading-title,
+.elementor-4281 .elementor-element-622b015 .elementor-heading-title,
+.elementor-4281 .elementor-element-458613d .elementor-heading-title,
+.elementor-4281 .elementor-element-68f6ed1 .elementor-heading-title,
+.elementor-4281 .elementor-element-9fef3d3 p,
+.elementor-4281 .elementor-element-dd6541c p,
+.elementor-4281 .elementor-element-68f6ed1 p {
+  line-height: 1.4 !important;
+}
+.elementor-4281 .elementor-element-5e97615 .elementor-heading-title,
+.elementor-4281 .elementor-element-dc2ea77 .elementor-heading-title,
+.elementor-4281 .elementor-element-bd5d3e1 .elementor-heading-title,
+.elementor-4281 .elementor-element-3a66eed .elementor-heading-title,
+.elementor-4281 .elementor-element-385cc59 .elementor-heading-title,
+.elementor-4281 .elementor-element-61a6573 .elementor-heading-title,
+.elementor-4281 .elementor-element-9b093ad .elementor-heading-title,
+.elementor-4281 .elementor-element-ccb0120 .elementor-heading-title,
+.elementor-4281 .elementor-element-be14e5c .elementor-heading-title,
+.elementor-4281 .elementor-element-753646d .elementor-heading-title,
+.elementor-4281 .elementor-element-4ef6652 .elementor-heading-title,
+.elementor-4281 .elementor-element-0087b84 .elementor-heading-title {
+  line-height: 1.3 !important;
+}
+
+/* --- 4. The service cards and the sticky stack -------------- */
+.elementor-4281 #services,
+.elementor-4281 .elementor-element-96b33a1,
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner {
+  overflow: visible !important;
+}
+/* gap must be 0 or the pinned cards keep getting pushed apart */
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner { gap: 0 !important; }
+
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con {
+  padding: 40px;
+  position: sticky !important;
+  top: 100px;
+  margin-bottom: 28px;
+  /* two shadows: the upward one is what makes an arriving card
+     read as sitting on top of the pinned one                    */
+  box-shadow: 0 -6px 24px -20px rgba(31, 40, 51, .3),
+              0 10px 30px -18px rgba(31, 40, 51, .25);
+}
+
+/* --- 5. Mobile: keep the stacking effect ------------------
+   A pinned card taller than the screen would hide its own CTA,
+   so on phones the card is compacted until a whole one fits.   */
+@media (max-width: 767px) {
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con {
+    padding: 16px;
+    top: 80px;
+    margin-bottom: 22px;
+  }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner {
+    gap: 12px !important;
+  }
+  /* photo: shallower crop.
+     The ratio belongs on the media CONTAINER - putting it on the
+     <img> leaves the container at its old height and opens a gap. */
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con
+    > .e-con-inner > .e-con:first-child {
+    aspect-ratio: 2.4 / 1 !important;
+  }
+  /* card heading */
+  .elementor-4281 .elementor-element-96b33a1 h2.elementor-heading-title {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+  /* pill label and the description both render as <p> headings */
+  .elementor-4281 .elementor-element-96b33a1 p.elementor-heading-title {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+  /* checklist */
+  .elementor-4281 .elementor-element-96b33a1 .elementor-icon-list-text {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+  }
+  .elementor-4281 .elementor-element-96b33a1 .elementor-icon-list-items > li {
+    margin-bottom: 4px !important;
+  }
+  .elementor-4281 .elementor-element-96b33a1 .elementor-widget-icon-list {
+    margin-top: 14px !important;
+  }
+  .elementor-4281 .elementor-element-96b33a1 .elementor-widget-button {
+    margin-top: 12px !important;
+  }
+  .elementor-4281 .elementor-element-96b33a1 .elementor-button {
+    padding: 11px 18px !important;
+  }
+}
+
+/* Short phones keep the stack too - the card is trimmed to fit
+   rather than dropped to normal flow, so the effect survives on
+   an SE-class screen. See the tiers at the end of this file.    */
+
+/* --- 6. Button label line height (mockup uses 1.25) --------- */
+.elementor-4281 .elementor-button { line-height: 1.25 !important; }
+
+/* --- 7. Service photos fill their ratio box ------------------
+   Elementor's image widget does not stretch by default, so the
+   photo has to be told to fill the container that carries the
+   aspect ratio.                                                 */
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con
+  > .e-con-inner > .e-con:first-child > .e-con-inner,
+.elementor-4281 .elementor-element-96b33a1 .elementor-widget-image,
+.elementor-4281 .elementor-element-96b33a1 .elementor-widget-image
+  > .elementor-widget-container {
+  height: 100%;
+}
+.elementor-4281 .elementor-element-96b33a1 .elementor-widget-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: auto;
+  display: block;
+}
+
+
+/* --- 8. FAQ accordion ---------------------------------------
+   The accordion titles were saved with line-height 1.5 PX
+   instead of a unitless 1.5, which overlaps the text.          */
+.elementor-4281 .elementor-element-458613d .e-n-accordion-item-title,
+.elementor-4281 .elementor-element-458613d .e-n-accordion-item-title-text,
+.elementor-4281 .elementor-element-458613d summary {
+  line-height: 1.4 !important;
+  font-size: 16.5px !important;
+}
+.elementor-4281 .elementor-element-458613d .e-n-accordion-item > div,
+.elementor-4281 .elementor-element-458613d p {
+  line-height: 1.5 !important;
+}
+
+/* ============================================================
+   9. Service pill  - icon was rendering at its natural 95px.
+      The mockup draws it at 26px, which also keeps the pill a
+      pill (34px tall) instead of a 119px oval.
+   ============================================================ */
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con
+  > .e-con-inner > .e-con:last-child > .e-con:first-child{
+  padding-top:4px !important; padding-bottom:4px !important; }
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con
+  > .e-con-inner > .e-con:last-child > .e-con:first-child > .e-con-inner{
+  padding-top:0 !important; padding-bottom:0 !important; align-items:center !important; }
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con
+  > .e-con-inner > .e-con:last-child > .e-con:first-child .elementor-widget-image,
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con
+  > .e-con-inner > .e-con:last-child > .e-con:first-child .elementor-widget-image
+  > .elementor-widget-container{
+  width:26px !important; height:26px !important; }
+.elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con
+  > .e-con-inner > .e-con:last-child > .e-con:first-child img{
+  width:26px !important; height:26px !important; object-fit:contain !important; }
+
+/* ---- short phones: trim the card so the stack still fits ---- */
+@media (max-width:767px) and (max-height:719px){
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con{
+    position:sticky !important; top:72px !important;
+    padding:12px !important; margin-bottom:18px !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner{
+    padding-top:6px !important; padding-bottom:6px !important; gap:8px !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con:first-child{
+    aspect-ratio:3.4 / 1 !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con p.elementor-heading-title,
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con .elementor-widget-text-editor{
+    font-size:13.5px !important; line-height:1.35 !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con .elementor-icon-list-text{
+    font-size:13px !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con h2.elementor-heading-title{
+    font-size:21px !important; line-height:1.18 !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con .elementor-icon-list-items > li{
+    margin-bottom:2px !important; }
+}
+@media (max-width:767px) and (max-height:659px){
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con{ top:64px !important; margin-bottom:14px !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con:first-child{
+    aspect-ratio:3.6 / 1 !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con h2.elementor-heading-title{ font-size:19.5px !important; }
+}
+
+/* mockup: the pill icon is 22px on phones, 26px above that */
+@media (max-width:767px){
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con:last-child > .e-con:first-child .elementor-widget-image,
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con:last-child > .e-con:first-child .elementor-widget-image > .elementor-widget-container,
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con:last-child > .e-con:first-child img{ width:22px !important; height:22px !important; }
+}

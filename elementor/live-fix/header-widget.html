@@ -1,0 +1,79 @@
+<div class="lm-hdr" id="lmHdr">
+  <div class="lm-hdr-in">
+    <a class="lm-logo" href="#home" aria-label="Lumiere Dental Kota Warisan">
+      <img src="https://www.lumieredental.com.my/wp-content/uploads/2026/09/logo-gold.png" alt="Lumiere Dental">
+      <span>Lumiere Dental</span>
+    </a>
+    <nav class="lm-nav" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="lm-cta">
+      <a class="lm-btn" href="https://wa.me/601116083188?text=Hi%20Lumiere%20Dental%20Kota%20Warisan%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book An Appointment<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <button class="lm-burger" id="lmBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+  <div class="lm-drawer">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    <a class="lm-btn" href="https://wa.me/601116083188?text=Hi%20Lumiere%20Dental%20Kota%20Warisan%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book An Appointment<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</div>
+<style>
+.lm-hdr{position:fixed;inset:0 0 auto 0;z-index:1000;font-family:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;transition:background-color .35s ease,box-shadow .35s ease}
+.lm-hdr *{box-sizing:border-box}
+.lm-hdr a{text-decoration:none}
+.lm-hdr-in{max-width:1250px;margin:0 auto;display:flex;align-items:center;gap:30px;padding:18px 30px}
+.lm-logo{display:flex;align-items:center;gap:13px}
+.lm-logo img{height:56px;width:auto;display:block}
+.lm-logo span{font-weight:600;font-size:21px;letter-spacing:.01em;color:#fff;transition:color .35s ease}
+.lm-nav{display:flex;gap:30px;margin:0 auto}
+.lm-nav a{color:rgba(255,255,255,.86);font-size:16.5px;transition:color .25s ease}
+.lm-nav a:hover{color:#fff}
+.lm-btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:12px;font-size:15.5px;font-weight:500;line-height:1.25;background:#fff;color:#33485C;transition:background-color .25s ease,color .25s ease}
+.lm-btn svg{width:17px;height:17px;flex:none;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.lm-btn:hover svg{transform:translateX(4px)}
+.lm-cta .lm-btn:hover{background:#E8D397;color:#1F2833}
+.lm-hdr.scrolled{background:rgba(250,249,245,.93);backdrop-filter:blur(12px);box-shadow:0 1px 0 #E6E2D6,0 8px 24px -18px rgba(31,40,51,.25)}
+.lm-hdr.scrolled .lm-logo span{color:#1F2833}
+.lm-hdr.scrolled .lm-nav a{color:#5A6270}
+.lm-hdr.scrolled .lm-nav a:hover{color:#1F2833}
+.lm-hdr.scrolled .lm-cta .lm-btn{background:#33485C;color:#fff}
+.lm-hdr.scrolled .lm-cta .lm-btn:hover{background:#26394B}
+.lm-burger{display:none;width:44px;height:44px;position:relative;background:none;border:0;padding:0;cursor:pointer}
+.lm-burger span{position:absolute;left:10px;right:10px;height:2px;border-radius:2px;background:#fff;transition:transform .3s cubic-bezier(.34,1.56,.64,1),top .3s cubic-bezier(.34,1.56,.64,1),background-color .35s}
+.lm-burger span:nth-child(1){top:17px}
+.lm-burger span:nth-child(2){top:25px}
+.lm-hdr.scrolled .lm-burger span,.lm-hdr.menu-open .lm-burger span{background:#1F2833}
+.lm-hdr.menu-open .lm-burger span:nth-child(1){top:21px;transform:rotate(45deg)}
+.lm-hdr.menu-open .lm-burger span:nth-child(2){top:21px;transform:rotate(-45deg)}
+.lm-drawer{display:none;flex-direction:column;gap:4px;background:#FAF9F5;border-top:1px solid #E6E2D6;padding:14px 30px 22px;box-shadow:0 24px 32px -24px rgba(31,40,51,.3)}
+.lm-drawer a:not(.lm-btn){padding:12px 2px;font-size:16.5px;color:#1F2833;border-bottom:1px solid #EFECE3}
+.lm-drawer .lm-btn{margin-top:14px;justify-content:center;background:#33485C;color:#fff}
+.lm-hdr.menu-open .lm-drawer{display:flex}
+@media (max-width:1024px){
+  .lm-nav,.lm-cta{display:none}
+  .lm-burger{display:block;margin-left:auto}
+  .lm-logo img{height:48px}
+  .lm-logo span{font-size:19px}
+}
+@media (max-width:767px){
+  .lm-logo img{height:44px}
+  .lm-logo span{font-size:17.5px}
+  .lm-hdr-in{padding:13px 20px}
+  .lm-drawer{padding:12px 20px 20px}
+}
+</style>
+<script>
+(function(){
+  var h=document.getElementById('lmHdr'); if(!h||h.dataset.lmInit) return; h.dataset.lmInit='1';
+  var b=document.getElementById('lmBurger');
+  function onScroll(){ h.classList.toggle('scrolled', window.scrollY > 40); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+  b.addEventListener('click', function(){
+    var open=h.classList.toggle('menu-open');
+    b.setAttribute('aria-expanded', open?'true':'false');
+  });
+  h.querySelectorAll('.lm-drawer a').forEach(function(a){
+    a.addEventListener('click', function(){ h.classList.remove('menu-open'); b.setAttribute('aria-expanded','false'); });
+  });
+})();
+</script>
