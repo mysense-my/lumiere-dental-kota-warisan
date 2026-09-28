@@ -276,3 +276,54 @@
   .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con:last-child > .e-con:first-child .elementor-widget-image > .elementor-widget-container,
   .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con:last-child > .e-con:first-child img{ width:22px !important; height:22px !important; }
 }
+
+/* =============================================================
+   10. Mockup parity  - measured against the mockup at 1440px
+   ============================================================= */
+/* About photo was 639px wide and bleeding off the left edge.
+   The mockup draws it at 522px inside the boxed column.        */
+.elementor-4281 .elementor-element-ae25949 > .e-con-inner > .e-con:first-child{ max-width:522px !important; }
+.elementor-4281 .elementor-element-ae25949 img,
+.elementor-4281 #about img{ object-fit:cover !important; }
+
+/* hero location chip: mockup is 13.5px at 92% white, not 16px solid */
+.elementor-4281 #home .elementor-element-ae5d5fd .elementor-heading-title{
+  font-size:13.5px !important; color:rgba(255,255,255,.92) !important; line-height:1.3 !important; }
+
+/* stat labels are body grey at 1.4, not ink at 2.5 */
+.elementor-4281 .elementor-element-f3cdfd5 .elementor-counter-title,
+.elementor-4281 .elementor-element-f3cdfd5 p.elementor-heading-title{ color:#5A6270 !important; line-height:1.4 !important; }
+
+/* how-it-works step titles are 600 in the mockup */
+.elementor-4281 #how h3.elementor-heading-title,
+.elementor-4281 #how h4.elementor-heading-title{ font-weight:600 !important; }
+
+/* review card meta lines are body grey (the reviewer NAME stays ink) */
+.elementor-4281 .elementor-element-bcc5893 .elementor-heading-title,
+.elementor-4281 .elementor-element-ef63e87 .elementor-heading-title,
+.elementor-4281 .elementor-element-01487f2 .elementor-heading-title,
+.elementor-4281 .elementor-element-9d1f83b .elementor-heading-title{ color:#5A6270 !important; }
+
+/* FAQ questions are 500; the title node is h3.e-n-accordion-item-title-text */
+.elementor-4281 .elementor-element-458613d .e-n-accordion-item-title,
+.elementor-4281 .elementor-element-458613d h3.e-n-accordion-item-title-text,
+.elementor-4281 .elementor-element-458613d summary{ font-weight:500 !important; color:#1F2833 !important; }
+
+/* panels helper line is an <a> carrying its own weight */
+.elementor-4281 .elementor-element-dd6541c .elementor-heading-title,
+.elementor-4281 .elementor-element-dd6541c a{ font-size:15px !important; font-weight:500 !important; }
+
+.elementor-4281 #home .elementor-button{ font-weight:500 !important; }
+
+/* --- 11. Remaining parity ----------------------------------- */
+@media (min-width:1025px){
+  /* section 4's 40px card padding has no !important, so the
+     container's own padding was winning and widening the row   */
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con{ padding:40px !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner{ gap:48px !important; }
+  .elementor-4281 .elementor-element-96b33a1 > .e-con-inner > .e-con > .e-con-inner > .e-con{
+    flex:1 1 0 !important; width:auto !important; }
+}
+/* photos crop, never stretch */
+.elementor-4281 .elementor-element-8d2dae4 img{ object-fit:cover !important; }
+.lm-hdr .lm-logo img,.lm-ftr .lm-flogo img{ object-fit:contain !important; }
