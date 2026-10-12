@@ -327,3 +327,15 @@
 /* photos crop, never stretch */
 .elementor-4281 .elementor-element-8d2dae4 img{ object-fit:cover !important; }
 .lm-hdr .lm-logo img,.lm-ftr .lm-flogo img{ object-fit:contain !important; }
+
+/* --- 12. About cards row (desktop only) -----------------------
+   The four cards carry a fixed 286.64px width that was sized for
+   the older, wider container. In the 1170px tray:
+     4 x 286.64 + 3 x 9px gap = 1174  ->  4px too wide,
+   so the fourth card wrapped onto a row of its own. Letting them
+   divide the row gives the mockup's 285px each.
+   Tablet (2x2) and phone (stacked) keep their own widths.       */
+@media (min-width:1025px){
+  .elementor-4281 .elementor-element-cee3e2a > .e-con-inner > .e-con{
+    flex:1 1 0 !important; width:auto !important; min-width:0 !important; }
+}

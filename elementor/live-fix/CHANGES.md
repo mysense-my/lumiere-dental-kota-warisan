@@ -50,3 +50,50 @@ At 1440x900 against the mockup: all 20 images match size and ratio
 (service photos 531x398, team photo 522x391, pill icons 26x26), 121 matched
 text nodes with no style differences, content column 1190 at L125.
 Sticky card stack works at 1440, 390x844, 375x667 and 360x640.
+
+---
+
+# Round 2 — 12 Oct 2026
+
+## 1. "Why Lumiere" cards wrapped 3 + 1
+
+The four cards had a fixed **286.64px** width, sized for the wider
+container the page used before the Boxed-1190 change. In the 1170px tray:
+
+    4 x 286.64 + 3 x 9px gap = 1174px  ->  4px too wide
+
+so the fourth card wrapped onto its own row. Section 12 of the CSS lets the
+cards divide the row instead (`flex:1 1 0`), giving the mockup's ~285px each.
+Scoped to `min-width:1025px`, so tablet (2x2) and phone (stacked) are untouched.
+
+Cards 2, 3 and 4 also had padding `26/22/26/22` where card 1 and the mockup
+use `28/26/30/26`. All four now match.
+
+## 2. Images converted to WebP
+
+All 26 non-WebP images on the page were converted and re-pointed.
+
+| | before | after |
+|---|---|---|
+| Served image weight | 3.90 MB | **1.61 MB** |
+
+**2.29 MB saved (58.7%).** Biggest wins: `hero-lobby` 637→222 KB,
+`team-neon` 528→260 KB, `neon-wall` 391→156 KB.
+
+- Photos: quality 82 (RMSE 1.5–3.5 — not visually distinguishable).
+- Icons and logos: **lossless**, verified pixel-identical in every visible
+  pixel with alpha preserved.
+- Originals were left in the media library, so this is reversible.
+- Source files: `elementor/webp/`.
+
+Done by direct conversion (Pillow) + re-upload, NOT via LiteSpeed's optimizer —
+that needs a QUIC.cloud account link and reported a quota of 0 images.
+
+**Deliberately left as PNG** (they are site-wide, not page content, and should
+not be WebP): `Retina-Logo-2.png` (Rank Math JSON-LD schema logo) and
+`logo-300x300.png` (apple-touch-icon / MS tile).
+
+### If you want this automatic for future uploads
+Link the site to QUIC.cloud and turn on LiteSpeed Cache > Image Optimization.
+That needs an account, so it is your call — it also means images are sent to
+QUIC.cloud for conversion.
