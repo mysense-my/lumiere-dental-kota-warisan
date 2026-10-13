@@ -97,3 +97,30 @@ not be WebP): `Retina-Logo-2.png` (Rank Math JSON-LD schema logo) and
 Link the site to QUIC.cloud and turn on LiteSpeed Cache > Image Optimization.
 That needs an account, so it is your call — it also means images are sent to
 QUIC.cloud for conversion.
+
+---
+
+# Round 3 — 13 Oct 2026
+
+## Nav clicks now show the section in the address bar
+
+**Symptom:** clicking Home / About / Services / … scrolled to the right place
+but the URL never changed, so there was nothing to copy as an ad destination.
+
+**Cause:** ElementsKit binds a delegated jQuery handler to `a[href*="#"]` that
+smooth-scrolls the page but never writes `location.hash`.
+
+**Fix:** a small `lm-hash-sync` block at the end of the header widget's script.
+It listens for clicks on any in-page `#` link and, after the scroll handler has
+run, pushes the fragment onto the URL with `history.pushState`, keeping the
+existing path and query string. `pushState` does not scroll, so the smooth
+scroll is untouched, and Back still steps through the sections.
+
+It skips `#elementor-action` links (lightboxes) and any `#` target that does not
+exist on the page.
+
+**Verified** — nav, mobile drawer, hero buttons and footer links all write the
+fragment; all nine anchors land on the right section; `gclid` and `utm_*`
+parameters survive both a direct load and every in-page click; Back works.
+
+Destination URLs for the ads team: **AD-LINKS.md**.
