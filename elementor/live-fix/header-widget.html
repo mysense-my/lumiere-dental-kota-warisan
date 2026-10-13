@@ -76,5 +76,31 @@
   h.querySelectorAll('.lm-drawer a').forEach(function(a){
     a.addEventListener('click', function(){ h.classList.remove('menu-open'); b.setAttribute('aria-expanded','false'); });
   });
+
+  /* lm-hash-sync -------------------------------------------------
+     ElementsKit binds a delegated handler to a[href*="#"] that
+     smooth-scrolls but never writes the fragment, so the address
+     bar stayed on the bare page URL no matter which section you
+     clicked. This writes it back after the scroll handler runs,
+     keeping the existing path and query string (so gclid / utm
+     parameters on an ad click survive). pushState does not scroll,
+     so the smooth scroll is untouched and Back still works.       */
+  if(!document.documentElement.dataset.lmHashSync){
+    document.documentElement.dataset.lmHashSync = '1';
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if(!a) return;
+      var id = a.getAttribute('href');
+      if(!id || id === '#' || id.indexOf('#elementor-action') === 0) return;
+      var target;
+      try { target = document.querySelector(id); } catch(err) { return; }
+      if(!target) return;
+      setTimeout(function(){
+        if(location.hash !== id){
+          history.pushState(null, '', location.pathname + location.search + id);
+        }
+      }, 0);
+    }, false);
+  }
 })();
 </script>
